@@ -162,3 +162,24 @@ TypeError: 'str' object does not support item assignment
     #'hella world'
     s = s[:4] + 'o' + s[5:]
      #'hello world'
+
+
+Что увидим на экране после запуска следующего кода?
+    s = 'qwerty123'
+    s[2] = 'a'
+    print(s)
+
+    Будет ошибка TypeError: 'str' object does not support item assignment
+
+
+Что увидим на экране после запуска следующего кода?
+    s = 'qwerty123'
+    print(s[5:2])
+    
+    Пустая строка
+
+Что увидим на экране после запуска следующего кода?
+    s = 'qwerty123'
+    print(s[6:54])
+
+    123
