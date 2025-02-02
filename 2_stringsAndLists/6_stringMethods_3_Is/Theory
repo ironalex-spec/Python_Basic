@@ -1,0 +1,86 @@
+                Группа методов, выполняющих проверку
+У строк есть целая группа методов, которые начинаются на строку is. Все эти методы объединяет одно: они выполняют проверку 
+строки на определенное условие. Результатом работы этих методов будет логическое значение: True или False.
+
+                        Метод islower
+Метод .islower  имеет следующий шаблон вызова:
+        S.islower()
+Данный метод возвращает True , если строка S не пустая и состоит только из алфавитных букв, 
+записанных в нижнем регистре. Если в строке имеется хотя бы одна заглавная буква, будет возвращено False.  
+Знаки пунктуации, специальные символы или цифры игнорируются при проверке.
+        print(''.islower())  # False
+        print('qwerty'.islower())   # True
+        print('qwerty!@?'.islower())  # True
+        print('12345'.islower())  # False
+        print('12w345'.islower())  # True
+        print('12W345'.islower())  # False
+        print('12345qwerty'.islower())  # True
+        print('12345Qwerty'.islower())  # False
+
+
+                    Метод isupper
+Метод .isupper  имеет следующий шаблон вызова:
+    S.isupper()
+Данный метод возвращает True , если строка S не пустая и состоит только из алфавитных букв, записанных в верхнем регистре. 
+Если в строке имеется хотя бы одна строчная буква, будет возвращено False.  Знаки пунктуации, специальные символы или 
+цифры игнорируются при проверке.
+    print(''.isupper())  # False
+    print('QWERTY'.isupper())   # True
+    print('QWERTY!@?'.isupper())  # True
+    print('12345'.isupper())  # False
+    print('12w345'.isupper())  # False
+    print('12W345'.isupper())  # True
+    print('12345QWERTY'.isupper())  # True
+    print('12345Qwerty'.isupper())  # False
+
+
+                Метод isdigit
+Метод .isdigit  имеет следующий шаблон вызова:
+    S.isdigit()
+Данный метод возвращает True , если строка S не пустая и состоит только из символов-цифр. 
+В случае, если строка пустая или в строке есть хотя бы один символ отличный от цифр, вернется False
+
+                Метод isalpha
+Метод .isalpha  имеет следующий шаблон вызова:
+    S.isalpha()
+Данный метод возвращает True , если строка S не пустая и состоит только из символов-букв. Если в строке 
+встретится хотя бы один символ, неявляющийся буквой, то метод .isalpha вернет значение False.
+    print(''.isalpha())  # False
+    print('ЗемфиРа'.isalpha())  # True
+    print('Я искала тебя'.isalpha())  # False
+    print('ЯИскалаТебя'.isalpha())  # True
+    print('Годами'.isalpha())  # True
+    print('qwerty'.isalpha())  # True
+    print('12a45'.isalpha())  # False
+    print('qwerty!'.isalpha())  # False
+
+
+                Метод isalnum
+Метод .isalnum  имеет следующий шаблон вызова:
+    S.isalnum()
+Данный метод возвращает True , если строка S не пустая и состоит только из букв и цифр. 
+Если в строке имеется хотя бы один не буквенный и не числовой символ, то будет возвращено False:
+    print(''.isalnum())  # False
+    print('ЗемфиРа'.isalnum())  # True
+    print('Я искала тебя'.isalnum())  # False
+    print('ЯИскалаТебя'.isalnum())  # True
+    print('Годами'.isalnum())  # True
+    print('Днями,Годами'.isalnum())  # False
+    print('qwerty'.isalnum())  # True
+    print('12a45'.isalnum())  # True
+    print('qwerty!'.isalnum())  # False
+
+            Метод istitle
+Метод .istitle  имеет следующий шаблон вызова:
+        S.istitle()
+Данный метод возвращает True , если строка S не пустая и является строкой заголовков: каждое новое слово начинается 
+с заглавной буквы.  Знаки пунктуации, специальные символы или цифры игнорируются при проверке.
+    print(''.istitle())  # False
+    print('ЗемфиРа'.istitle())  # False
+    print('Хочешь солнце'.istitle())  # False
+    print('вместо лампы'.istitle())  # False
+    print('Хочешь'.istitle())  # True
+    print('За Окошком Альпы?'.istitle())  # True
+    print('12345'.istitle())  # False
+    print('12345 Привет'.istitle())  # True
+    print('12345,Привет, Человек!'.istitle())  # True
